@@ -4,9 +4,14 @@ import java.util.Arrays;
 
 public class MaxMethod {
     public static int max(int[] values) {
-        int[] copyOfArray=values.clone();
+        int max=values[0];
+        for (int value:values) {
+            if (max<value)
+                max=value;
+        }
+        return max;
+        /*int[] copyOfArray=values.clone();
         Arrays.sort(copyOfArray);
-        return copyOfArray[copyOfArray.length-1];
-        //throw new UnsupportedOperationException();
+        return copyOfArray[copyOfArray.length-1];*/
     }
 }
